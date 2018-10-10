@@ -22,7 +22,10 @@ var carDetails = {
 */
 
 //Code Here
+var {color,make,model,year} = carDetails
+console.log(color ,make ,model , year)
 
+console.log(carDetails)
 
 
 ////////// PROBLEM 2 //////////
@@ -32,14 +35,22 @@ var carDetails = {
   Use object destructuring to save the object properties to new variables. 
   The property names are firstName, lastName, and title.
 */
+var person = {
 
+  firstName: 'Master',
+  lastName: 'Commander',
+  title: 'The'
+
+}
 function greeting( obj ) {
-  //Code Here
   
+  var {firstName,lastName,title}= obj
+  console.log(obj)
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
+console.log(greeting(person))
 
 
 
@@ -52,8 +63,20 @@ function greeting( obj ) {
   Use object destructuring to save the property values to new variables.
   Sum up the values and return the total number.
 */
+var places = {
+  utah:200000,
+  california:300000,
+  texas:4000000,
+  arizona:50
+}
+function totalPopulation (obj){
+let {utah,california,texas,arizona} = places;
+return places.utah + places.california + places.texas + places.arizona
 
-//Code Here
+
+}
+
+console.log(totalPopulation(places))
 
 
 
